@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken");
 const { classDataValidation } = require("../validation");
 require("dotenv").config();
 const authenticateToken = require("../middlewares/jwtAuthentication");
-const Class = require("../models/Class");
 const Teacher = require("../models/Teacher");
 const { v4: uuidV4 } = require("uuid");
 

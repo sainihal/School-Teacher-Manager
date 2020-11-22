@@ -21,9 +21,11 @@ mongoose.connect(
 
 const authRoute = require("./routes/auth");
 const teacherRoute = require("./routes/teacher");
+const classRoute = require("./routes/class")
 
 app.use("/api/admin", authRoute);
 app.use("/api/admin", teacherRoute);
+app.use("/api/admin", classRoute);
 
 app.listen(6001, () => {
   console.log("The server is running on port 6001");
