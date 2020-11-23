@@ -9,6 +9,7 @@ import ErrorPage from "../Components/ErrorPage";
 export default function Routes() {
   return (
     <Switch>
+      <Route path="/" exact render={(props) => <LoginPage {...props} />} />
       <Route path="/login" exact render={(props) => <LoginPage {...props} />} />
       <Route path="/register" exact render={() => <RegisterPage />} />
       <Route
