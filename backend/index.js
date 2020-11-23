@@ -27,6 +27,6 @@ app.use("/api/admin", authRoute);
 app.use("/api/admin", teacherRoute);
 app.use("/api/admin", classRoute);
 
-app.listen(6001, () => {
+app.listen((process.env.PORT || 6001), () => {
   console.log("The server is running on port 6001");
 });
