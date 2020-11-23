@@ -31,7 +31,7 @@ export default function MainPage(props) {
     try {
       await axios
         .post(
-          `http://localhost:6001/api/admin/addTeacher`,
+          `https://school-teacher-manager.herokuapp.com/api/admin/addTeacher`,
           { name: newName, age: newAge, gender: newGender },
           {
             headers: {
@@ -50,7 +50,7 @@ export default function MainPage(props) {
   useEffect(() => {
     return axios
       .get(
-        `http://localhost:6001/api/admin/getAllTeachers?page=${current}&limit=4&sort=${sort}&filter=${genderFilter}`,
+        `https://school-teacher-manager.herokuapp.com/api/admin/getAllTeachers?page=${current}&limit=4&sort=${sort}&filter=${genderFilter}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,

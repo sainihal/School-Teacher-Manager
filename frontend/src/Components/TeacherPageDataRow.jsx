@@ -21,7 +21,7 @@ export default function TeacherPageDataRow(props) {
     try {
       await axios
         .post(
-          `http://localhost:6001/api/admin/editClass`,
+          `https://school-teacher-manager.herokuapp.com/api/admin/editClass`,
           {
             class_id,
             grade: newGrade,

@@ -39,7 +39,7 @@ export const register = (payload) => (dispatch) => {
   dispatch(registerRequest());
   axios({
     method: "post",
-    url: "http://localhost:6001/api/admin/register",
+    url: "https://school-teacher-manager.herokuapp.com/api/admin/register",
     data: {
       ...payload,
     },
@@ -62,7 +62,7 @@ export const login = (payload) => (dispatch) => {
   dispatch(loginRequest());
   axios({
     method: "post",
-    url: "http://localhost:6001/api/admin/login",
+    url: "https://school-teacher-manager.herokuapp.com/api/admin/login",
     data: {
       ...payload,
     },

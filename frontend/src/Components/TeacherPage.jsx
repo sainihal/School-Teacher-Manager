@@ -1,4 +1,3 @@
-import Axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -30,7 +29,7 @@ export default function TeacherPage(props) {
     e.preventDefault();
     try {
       await axios
-        .delete(`http://localhost:6001/api/admin/deleteTeacher/${teacherId}`, {
+        .delete(`https://school-teacher-manager.herokuapp.com/api/admin/deleteTeacher/${teacherId}`, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -49,7 +48,7 @@ export default function TeacherPage(props) {
     try {
       await axios
         .post(
-          `http://localhost:6001/api/admin/editTeacher`,
+          `https://school-teacher-manager.herokuapp.com/api/admin/editTeacher`,
           {
             name: newName,
             age: newAge,
@@ -79,7 +78,7 @@ export default function TeacherPage(props) {
     try {
       await axios
         .post(
-          `http://localhost:6001/api/admin/addClass`,
+          `https://school-teacher-manager.herokuapp.com/api/admin/addClass`,
           {
             teacher_id: teacherId,
             grade,
@@ -117,7 +116,7 @@ export default function TeacherPage(props) {
     try {
       await axios
         .delete(
-          `http://localhost:6001/api/admin/deleteClass/${teacherId}/${class_id}`,
+          `https://school-teacher-manager.herokuapp.com/api/admin/deleteClass/${teacherId}/${class_id}`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -136,7 +135,7 @@ export default function TeacherPage(props) {
   useEffect(() => {
     return axios
       .get(
-        `http://localhost:6001/api/admin/getTeacher/${props.match.params.id}`,
+        `https://school-teacher-manager.herokuapp.com/api/admin/getTeacher/${props.match.params.id}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
